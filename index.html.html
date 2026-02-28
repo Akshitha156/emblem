@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrandAI | Ignite Your Vision</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; overflow-x: hidden; }
+        
+        /* POWERFUL ORANGE GRADIENT THEME */
+        .bg-power { 
+            background: radial-gradient(circle at top right, #ff5f1f, #e64a19, #212121); 
+            background-attachment: fixed;
+        }
+        
+        .glass { 
+            background: rgba(0, 0, 0, 0.4); 
+            backdrop-filter: blur(15px); 
+            border: 1px solid rgba(255, 255, 255, 0.1); 
+        }
+        
+        .accent-gold { background: linear-gradient(135deg, #FFD700 0%, #B8860B 100%); }
+        .text-gold { color: #FFD700; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; animation: slideUp 0.5s ease-out; }
+
+        @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        
+        /* Custom Button */
+        .btn-fire {
+            background: #FFD700;
+            color: #000;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(255, 95, 31, 0.3);
+        }
+        .btn-fire:hover { transform: scale(1.05); box-shadow: 0 15px 30px rgba(255, 215, 0, 0.4); }
+
+        /* Style for new template cards */
+        .template-card { transition: all 0.3s ease; cursor: pointer; }
+        .template-card:hover { transform: translateY(-5px); border-color: #FFD700; }
+    </style>
+</head>
+<body class="bg-power text-white min-h-screen">
+
+    <nav class="fixed w-full z-50 glass py-4 px-10 flex justify-between items-center border-b border-orange-500/20">
+        <div class="flex items-center gap-2">
+            <div class="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-lg shadow-orange-600/50">
+                <i data-lucide="flame" class="text-orange-600 w-6 h-6"></i>
+            </div>
+            <span class="text-2xl font-extrabold tracking-tighter italic">Brand<span class="text-gold">AI</span></span>
+        </div>
+        <div class="hidden md:flex gap-8 text-[11px] font-bold uppercase tracking-widest">
+            <a href="#vision" class="hover:text-gold transition">The Vision</a>
+            <a href="#app" class="hover:text-gold transition">Engine</a>
+            <a href="#about" class="hover:text-gold transition">Network</a>
+        </div>
+        <button class="bg-white text-black px-6 py-2 rounded-full font-bold text-xs hover:bg-gold transition">ENTREPRENEUR ACCESS</button>
+    </nav>
+
+    <section id="vision" class="pt-48 pb-32 px-6 text-center">
+        <div class="max-w-5xl mx-auto">
+            <div class="inline-block px-4 py-1 rounded-full border border-gold/30 bg-gold/10 text-gold text-[10px] font-black mb-8 uppercase tracking-[0.4em]">Ignite Your Legacy</div>
+            
+            <h1 class="text-6xl md:text-9xl font-extrabold mb-8 tracking-tighter leading-none">
+                FEARLESS <br><span class="text-transparent bg-clip-text accent-gold italic">CREATION.</span>
+            </h1>
+
+            <div class="max-w-2xl mx-auto mb-16">
+                <p class="text-2xl md:text-3xl font-light italic text-orange-100 opacity-90 leading-relaxed">
+                    "The best way to predict the future is to <span class="text-gold font-bold">create it.</span> Your ambition is the fuel; BrandAI is the engine."
+                </p>
+                <div class="w-20 h-1 bg-gold mx-auto mt-6 rounded-full"></div>
+            </div>
+
+            <a href="#app" class="btn-fire px-12 py-5 rounded-2xl font-black text-lg uppercase tracking-widest inline-flex items-center gap-3">
+                Build My Empire <i data-lucide="arrow-right-circle" class="w-6 h-6"></i>
+            </a>
+        </div>
+    </section>
+
+    <section id="app" class="py-20 px-4 md:px-10 max-w-[1600px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <aside class="lg:col-span-3 space-y-6">
+            <div class="glass p-8 rounded-[40px] border-orange-500/20">
+                <p class="text-[10px] font-black text-orange-400 uppercase tracking-widest mb-6">Core Modules</p>
+                <div class="flex flex-col gap-3">
+                    <button onclick="showTab('logo-tab')" class="flex items-center gap-3 text-gold bg-white/5 p-4 rounded-2xl transition font-bold"><i data-lucide="layers" class="w-5 h-5"></i> Logo Studio</button>
+                    <button onclick="showTab('design-tab')" class="flex items-center gap-3 text-gray-400 hover:text-gold p-4 rounded-2xl transition font-bold"><i data-lucide="palette" class="w-5 h-5"></i> Design Studio</button>
+                    <button onclick="showTab('social-tab')" class="flex items-center gap-3 text-gray-400 hover:text-gold p-4 rounded-2xl transition font-bold"><i data-lucide="share-2" class="w-5 h-5"></i> Social Expansion</button>
+                    <button onclick="showTab('growth-tab')" class="flex items-center gap-3 text-gray-400 hover:text-gold p-4 rounded-2xl transition font-bold"><i data-lucide="trending-up" class="w-5 h-5"></i> Growth Tracker</button>
+                    <button onclick="showTab('voice-tab')" class="flex items-center gap-3 text-gray-400 hover:text-gold p-4 rounded-2xl transition font-bold"><i data-lucide="mic-2" class="w-5 h-5"></i> Voice Sculptor</button>
+                </div>
+            </div>
+
+            <div class="glass p-6 rounded-[40px] border-orange-500/30 flex flex-col h-[450px]">
+                <div class="flex items-center gap-2 mb-4">
+                    <div class="w-2 h-2 bg-green-500 rounded-full animate-ping"></div>
+                    <span class="text-xs font-bold text-orange-300">Partner AI Active</span>
+                </div>
+                <div id="chatBox" class="flex-1 overflow-y-auto space-y-4 mb-4 text-sm pr-2 text-gray-300">
+                    <p class="bg-black/20 p-4 rounded-2xl italic">"Entrepreneurship is a marathon. Whether you're ready to scale or need a moment to regroup, I'm here. How's the vision today?"</p>
+                </div>
+                <div class="flex gap-2">
+                    <input id="chatInput" type="text" placeholder="I feel overwhelmed..." class="bg-black/40 border border-white/10 rounded-xl p-3 text-xs w-full focus:outline-none focus:border-gold">
+                    <button onclick="askAI()" class="btn-fire p-3 rounded-xl"><i data-lucide="send" class="w-5 h-5"></i></button>
+                </div>
+            </div>
+        </aside>
+
+        <main class="lg:col-span-9 glass rounded-[50px] p-12 border-white/5">
+            
+            <div id="logo-tab" class="tab-content active">
+                <h2 class="text-4xl font-black mb-2 uppercase italic">Logo <span class="text-gold">Studio</span></h2>
+                <p class="text-orange-200/60 mb-10">Instant visual identity concepts for your startup.</p>
+                <div class="flex flex-col md:flex-row gap-4 mb-12">
+                    <input id="logoInput" type="text" placeholder="Enter Business Name" class="bg-black/40 border border-white/20 p-5 rounded-3xl flex-1 text-2xl font-bold text-gold placeholder:text-gray-700 focus:border-gold transition-all outline-none">
+                    <button onclick="generateLogos()" class="btn-fire px-10 rounded-3xl font-black uppercase italic">Generate</button>
+                </div>
+                <div id="logoGrid" class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                </div>
+            </div>
+
+            <div id="design-tab" class="tab-content">
+                <h2 class="text-4xl font-black mb-4 uppercase italic">Design <span class="text-gold">Studio</span></h2>
+                <p class="text-orange-200/60 mb-10">Select a template and customize your collateral.</p>
+                
+                <div class="grid md:grid-cols-3 gap-6 mb-10">
+                    <div class="template-card glass p-6 rounded-3xl border border-white/10" onclick="loadTemplate('Poster')">
+                        <i data-lucide="file-text" class="text-gold w-10 h-10 mb-4"></i>
+                        <h4 class="font-bold text-lg mb-1">Posters</h4>
+                        <p class="text-xs text-gray-400">High-impact marketing visuals.</p>
+                    </div>
+                    <div class="template-card glass p-6 rounded-3xl border border-white/10" onclick="loadTemplate('Business Card')">
+                        <i data-lucide="credit-card" class="text-gold w-10 h-10 mb-4"></i>
+                        <h4 class="font-bold text-lg mb-1">Business Cards</h4>
+                        <p class="text-xs text-gray-400">Professional networking essentials.</p>
+                    </div>
+                    <div class="template-card glass p-6 rounded-3xl border border-white/10" onclick="loadTemplate('Invitation')">
+                        <i data-lucide="mail" class="text-gold w-10 h-10 mb-4"></i>
+                        <h4 class="font-bold text-lg mb-1">Invitations</h4>
+                        <p class="text-xs text-gray-400">Events that leave a mark.</p>
+                    </div>
+                </div>
+
+                <div id="editorArea" class="glass rounded-3xl p-6 hidden text-center border-2 border-gold/30">
+                    <p class="text-xs text-gold uppercase tracking-widest mb-4">Active Editor</p>
+                    <p id="activeTemplateName" class="text-xl font-bold mb-6"></p>
+                    <div class="h-64 bg-black/30 rounded-2xl flex items-center justify-center border-2 border-dashed border-white/20">
+                        <i data-lucide="edit-3" class="w-16 h-16 text-white/20"></i>
+                    </div>
+                    <button class="btn-fire mt-6 px-6 py-2 rounded-xl text-sm font-bold">Save Changes</button>
+                </div>
+            </div>
+
+            <div id="social-tab" class="tab-content">
+                <h2 class="text-4xl font-black mb-4 uppercase italic">Social <span class="text-gold">Expansion</span></h2>
+                <p class="text-orange-200/60 mb-10">Broadcast your business identity across the global grid.</p>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="glass p-8 rounded-3xl border-l-4 border-pink-500">
+                        <i data-lucide="instagram" class="text-pink-500 mb-4"></i>
+                        <h4 class="font-bold mb-2">Instagram Visualizer</h4>
+                        <p class="text-xs text-gray-500">Auto-generate 9-grid aesthetic and story templates.</p>
+                    </div>
+                    <div class="glass p-8 rounded-3xl border-l-4 border-blue-600">
+                        <i data-lucide="linkedin" class="text-blue-600 mb-4"></i>
+                        <h4 class="font-bold mb-2">LinkedIn Authority</h4>
+                        <p class="text-xs text-gray-500">Carousel kits for thought leadership and B2B growth.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="growth-tab" class="tab-content">
+                <h2 class="text-4xl font-black mb-8 uppercase italic">Growth <span class="text-gold">Tracker</span></h2>
+                <div class="glass p-10 rounded-[40px] bg-orange-600/5">
+                    <svg viewBox="0 0 1000 300" class="w-full h-72">
+                        <path d="M0,280 Q100,270 200,200 T400,220 T600,100 T800,50 T1000,20" fill="none" stroke="#FFD700" stroke-width="8" stroke-linecap="round" class="drop-shadow-[0_0_15px_rgba(255,215,0,0.5)]"/>
+                        <path d="M0,280 L1000,280" stroke="white" stroke-opacity="0.1" stroke-width="2"/>
+                    </svg>
+                    <div class="flex justify-between mt-10">
+                        <div class="text-center"><p class="text-xs font-bold text-gray-500 mb-2">DEMAND</p><p class="text-4xl font-black">HIGH</p></div>
+                        <div class="text-center"><p class="text-xs font-bold text-gray-500 mb-2">VELOCITY</p><p class="text-4xl font-black text-gold">+32%</p></div>
+                        <div class="text-center"><p class="text-xs font-bold text-gray-500 mb-2">REACH</p><p class="text-4xl font-black">GLOBAL</p></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="voice-tab" class="tab-content">
+                <h2 class="text-4xl font-black mb-4 uppercase italic">Voice <span class="text-gold">Sculptor</span></h2>
+                <p class="text-orange-200/60 mb-10">Define how your brand speaks to the world.</p>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="space-y-6">
+                        <p class="text-xs font-bold uppercase tracking-widest text-orange-400">Select Personality</p>
+                        <div class="grid grid-cols-2 gap-4">
+                            <button onclick="sculptVoice('Aggressive & Disruptive')" class="glass p-4 rounded-2xl hover:bg-gold hover:text-black transition font-bold text-sm">Disruptive</button>
+                            <button onclick="sculptVoice('Empathetic & Nurturing')" class="glass p-4 rounded-2xl hover:bg-gold hover:text-black transition font-bold text-sm">Nurturing</button>
+                            <button onclick="sculptVoice('Technical & Precise')" class="glass p-4 rounded-2xl hover:bg-gold hover:text-black transition font-bold text-sm">Technical</button>
+                            <button onclick="sculptVoice('Elite & Sophisticated')" class="glass p-4 rounded-2xl hover:bg-gold hover:text-black transition font-bold text-sm">Sophisticated</button>
+                        </div>
+                    </div>
+                    <div class="glass p-8 rounded-[32px] border-gold/20 flex flex-col justify-center text-center">
+                        <p class="text-[10px] text-gray-500 mb-4 uppercase tracking-[0.2em]">Generated Tagline</p>
+                        <p id="voiceResult" class="text-2xl font-bold italic">"Ready to sculpt your brand's unique voice..."</p>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </section>
+
+    <script>
+        lucide.createIcons();
+
+        function showTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+            document.querySelectorAll('aside button').forEach(btn => {
+                btn.classList.remove('text-gold', 'bg-white/5');
+                btn.classList.add('text-gray-400');
+            });
+            document.getElementById(tabId).classList.add('active');
+            event.currentTarget.classList.add('text-gold', 'bg-white/5');
+            event.currentTarget.classList.remove('text-gray-400');
+            lucide.createIcons();
+        }
+
+        // Added functionality for Design Studio
+        function loadTemplate(name) {
+            document.getElementById('editorArea').classList.remove('hidden');
+            document.getElementById('activeTemplateName').innerText = name + " Editor";
+            lucide.createIcons();
+        }
+
+        function generateLogos() {
+            const name = document.getElementById('logoInput').value || "Ambition";
+            const grid = document.getElementById('logoGrid');
+            const icons = ['flame', 'rocket', 'shield-check', 'zap', 'target', 'award', 'crown', 'command'];
+            grid.innerHTML = '<div class="col-span-4 py-20 text-center animate-pulse text-gold font-bold">DIGITAL ALCHEMY IN PROGRESS...</div>';
+            setTimeout(() => {
+                grid.innerHTML = '';
+                for(let i=0; i<4; i++){
+                    const icon = icons[Math.floor(Math.random() * icons.length)];
+                    grid.innerHTML += `<div class="glass h-48 rounded-[40px] flex flex-col items-center justify-center border-gold/10 hover:border-gold/50 transition-all cursor-pointer group">
+                        <i data-lucide="${icon}" class="w-14 h-14 text-gold mb-4 group-hover:scale-110 transition"></i>
+                        <span class="text-xs font-black uppercase tracking-widest text-white">${name}</span>
+                    </div>`;
+                }
+                lucide.createIcons();
+            }, 1000);
+        }
+
+        function sculptVoice(type) {
+            const results = {
+                'Aggressive & Disruptive': '"We don\'t follow rules. We set them. Join the revolution."',
+                'Empathetic & Nurturing': '"We understand your journey. Let\'s walk this path together."',
+                'Technical & Precise': '"Complexity simplified. Engineering excellence for the modern age."',
+                'Elite & Sophisticated': '"Uncompromising quality. For those who demand the extraordinary."'
+            };
+            document.getElementById('voiceResult').innerText = results[type];
+        }
+
+        function askAI() {
+            const input = document.getElementById('chatInput');
+            const box = document.getElementById('chatBox');
+            const text = input.value.toLowerCase();
+            if(!text) return;
+
+            box.innerHTML += `<p class="text-white font-bold mb-2">You: ${input.value}</p>`;
+            let response = "That is a powerful insight. Let's analyze how to weaponize that idea.";
+
+            if(text.includes('demotivated') || text.includes('tired') || text.includes('quit')) {
+                response = "I see the fire is flickering. **Strategic Fact:** 90% of startups fail because they stop too early, not because they lack talent. Take a breath. Your vision is still valid. Let's look at your Growth Tracker—the trend is still upward.";
+            } else if (text.includes('expand') || text.includes('world') || text.includes('big')) {
+                response = "Ambition detected. **The Strategy:** Global scaling requires a 'Universal Voice'. Use the Voice Sculptor to switch to 'Sophisticated' and let's double down on your Growth Tracker.";
+            } else if (text.includes('design') || text.includes('poster') || text.includes('social')) {
+                response = "Visual assets are crucial. Head over to the Design Studio to create materials, then utilize Social Expansion to share them.";
+            }
+
+            setTimeout(() => {
+                box.innerHTML += `<p class="bg-gold text-black p-4 rounded-2xl font-bold mt-2">${response}</p>`;
+                box.scrollTop = box.scrollHeight;
+            }, 800);
+            input.value = '';
+        }
+    </script>
+</body>
+</html>
